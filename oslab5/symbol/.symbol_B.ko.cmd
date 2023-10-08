@@ -1,0 +1,1 @@
+cmd_/home/pupuhero/Desktop/OSlab/oslab5/symbol/symbol_B.ko := ld -r  -m elf_x86_64 -z noexecstack   --build-id=sha1  -T scripts/module.lds -o /home/pupuhero/Desktop/OSlab/oslab5/symbol/symbol_B.ko /home/pupuhero/Desktop/OSlab/oslab5/symbol/symbol_B.o /home/pupuhero/Desktop/OSlab/oslab5/symbol/symbol_B.mod.o;  true

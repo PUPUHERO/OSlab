@@ -1,0 +1,1 @@
+cmd_/home/pupuhero/Desktop/OSlab/oslab5/symbol/modules.order := {   echo /home/pupuhero/Desktop/OSlab/oslab5/symbol/symbol_A.ko;   echo /home/pupuhero/Desktop/OSlab/oslab5/symbol/symbol_B.ko; :; } | awk '!x[$$0]++' - > /home/pupuhero/Desktop/OSlab/oslab5/symbol/modules.order
