@@ -1,0 +1,1 @@
+cmd_/home/oslab/lab5/hello_module_2/hello_module_2.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -T ./scripts/module-common.lds  --build-id  -o /home/oslab/lab5/hello_module_2/hello_module_2.ko /home/oslab/lab5/hello_module_2/hello_module_2.o /home/oslab/lab5/hello_module_2/hello_module_2.mod.o ;  true
