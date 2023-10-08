@@ -1,0 +1,1 @@
+cmd_/home/pupuhero/Desktop/OSlab/oslab5/hello_module/hello_module.mod := { echo  /home/pupuhero/Desktop/OSlab/oslab5/hello_module/hello_module.o;  echo; } > /home/pupuhero/Desktop/OSlab/oslab5/hello_module/hello_module.mod

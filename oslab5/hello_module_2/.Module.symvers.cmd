@@ -1,0 +1,1 @@
+cmd_/home/pupuhero/Desktop/OSlab/oslab5/hello_module_2/Module.symvers := sed 's/\.ko$$/\.o/' /home/pupuhero/Desktop/OSlab/oslab5/hello_module_2/modules.order | scripts/mod/modpost -m -a  -o /home/pupuhero/Desktop/OSlab/oslab5/hello_module_2/Module.symvers -e -i Module.symvers   -T -

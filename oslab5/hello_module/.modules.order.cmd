@@ -1,0 +1,1 @@
+cmd_/home/pupuhero/Desktop/OSlab/oslab5/hello_module/modules.order := {   echo /home/pupuhero/Desktop/OSlab/oslab5/hello_module/hello_module.ko; :; } | awk '!x[$$0]++' - > /home/pupuhero/Desktop/OSlab/oslab5/hello_module/modules.order
