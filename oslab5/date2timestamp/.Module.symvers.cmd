@@ -1,0 +1,1 @@
+cmd_/home/pupuhero/Desktop/OSlab/oslab5/date2timestamp/Module.symvers := sed 's/\.ko$$/\.o/' /home/pupuhero/Desktop/OSlab/oslab5/date2timestamp/modules.order | scripts/mod/modpost -m -a  -o /home/pupuhero/Desktop/OSlab/oslab5/date2timestamp/Module.symvers -e -i Module.symvers   -T -

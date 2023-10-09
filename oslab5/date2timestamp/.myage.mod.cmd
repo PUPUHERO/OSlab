@@ -1,0 +1,1 @@
+cmd_/home/pupuhero/Desktop/OSlab/oslab5/date2timestamp/myage.mod := { echo  /home/pupuhero/Desktop/OSlab/oslab5/date2timestamp/myage.o;  echo; } > /home/pupuhero/Desktop/OSlab/oslab5/date2timestamp/myage.mod
