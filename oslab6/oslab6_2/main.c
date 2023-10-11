@@ -2,6 +2,11 @@
 #include <unistd.h>
 #include <sys/wait.h>
 
+void print_process_info(char *process_name){
+    printf("I am %s process\n", process_name);
+    printf("pid: %d   parent id: %d\n", getpid(), getppid());
+}
+
 int main(){
     pid_t child_pid_1, child_pid_2, child_pid_3, child_pid_4;
 
@@ -12,7 +17,7 @@ int main(){
         perror("fork");
         break;
     case 0:
-        printf("I am child process B\n");
+        print_process_info("B");
         child_pid_2 = fork();
         switch (child_pid_2)
         {
@@ -20,11 +25,10 @@ int main(){
             perror("fork");
             break;
         case 0:
-            printf("I am child process C\n");
+            print_process_info("C");
             break; 
         default:
             wait(NULL);
-            // printf("I am child process D\n");
             break;
         }
         break;
@@ -37,7 +41,8 @@ int main(){
             perror("fork");
             break;
         case 0:
-            printf("I am child process D\n");
+            print_process_info("E");
+            break;
         default:
             wait(NULL);
             child_pid_4 = fork();
@@ -47,8 +52,11 @@ int main(){
                 perror("fork");
                 break;
             case 0:
-                printf("I am child process E\n");
+                print_process_info("D");
+                break;
             default:
+                wait(NULL);
+                print_process_info("A");
                 break;
             }
             break;
