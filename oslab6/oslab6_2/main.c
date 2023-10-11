@@ -17,7 +17,6 @@ int main(){
         perror("fork");
         break;
     case 0:
-        print_process_info("B");
         child_pid_2 = fork();
         switch (child_pid_2)
         {
@@ -29,6 +28,7 @@ int main(){
             break; 
         default:
             wait(NULL);
+            print_process_info("B");
             break;
         }
         break;
@@ -41,7 +41,7 @@ int main(){
             perror("fork");
             break;
         case 0:
-            print_process_info("E");
+            print_process_info("D");
             break;
         default:
             wait(NULL);
@@ -52,7 +52,7 @@ int main(){
                 perror("fork");
                 break;
             case 0:
-                print_process_info("D");
+                print_process_info("E");
                 break;
             default:
                 wait(NULL);
