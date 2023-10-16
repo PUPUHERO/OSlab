@@ -301,10 +301,11 @@ deps_/home/pupuhero/Desktop/OSlab/oslab5/date2timestamp/date2timestamp.o := \
     $(wildcard include/config/SPARSEMEM) \
     $(wildcard include/config/NUMA_KEEP_MEMINFO) \
   arch/x86/include/asm/nospec-branch.h \
-    $(wildcard include/config/DEBUG_ENTRY) \
+    $(wildcard include/config/CPU_SRSO) \
     $(wildcard include/config/CPU_IBPB_ENTRY) \
   include/linux/static_key.h \
   include/linux/objtool.h \
+    $(wildcard include/config/FRAME_POINTER) \
   arch/x86/include/asm/msr-index.h \
   arch/x86/include/asm/unwind_hints.h \
   arch/x86/include/asm/orc_types.h \
@@ -367,6 +368,7 @@ deps_/home/pupuhero/Desktop/OSlab/oslab5/date2timestamp/date2timestamp.o := \
   arch/x86/include/asm/bug.h \
     $(wildcard include/config/DEBUG_BUGVERBOSE) \
   include/linux/instrumentation.h \
+    $(wildcard include/config/DEBUG_ENTRY) \
   include/asm-generic/bug.h \
     $(wildcard include/config/BUG) \
     $(wildcard include/config/GENERIC_BUG_RELATIVE_POINTERS) \
@@ -375,7 +377,6 @@ deps_/home/pupuhero/Desktop/OSlab/oslab5/date2timestamp/date2timestamp.o := \
   arch/x86/include/asm/paravirt.h \
     $(wildcard include/config/PARAVIRT_SPINLOCKS) \
   arch/x86/include/asm/frame.h \
-    $(wildcard include/config/FRAME_POINTER) \
   arch/x86/include/asm/special_insns.h \
   include/linux/irqflags.h \
     $(wildcard include/config/TRACE_IRQFLAGS) \

@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "time.h": "c",
-        "module.h": "c"
+        "module.h": "c",
+        "time_types.h": "c"
     }
 }

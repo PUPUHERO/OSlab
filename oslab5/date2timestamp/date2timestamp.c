@@ -1,4 +1,5 @@
 #include <linux/module.h>
+#include <linux/time.h>
 
 int d = 1, m = 1, y= 1970;
 
@@ -13,14 +14,11 @@ long long int ts = 0;
 
 int init_module(void){
 
-    int year = y - 1970;
-    int month = m - 1;
-    int day = d - 1;
+    int year = y;
+    int month = m;
+    int day = d;
 
-    ts += year * 365 * 86400;
-    ts += month * 30 * 86400;
-    ts += day * 86400;
-
+    ts = mktime64(year, month, day, 0, 0, 0);
 
     printk(KERN_INFO "Loading date2timestamp Module...\n");
     printk(KERN_INFO "Your birthday is %d/%d/%d\n", y, m, d);
