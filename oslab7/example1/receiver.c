@@ -7,7 +7,7 @@
 #define MAX_MSG_SIZE 1000
 
 int main(){
-    mqd_t mqd = mq_open(MQNAME, O_RDONLY | O_CREAT, 0644, NULL);
+    mqd_t mqd = mq_open(MQNAME, O_RDONLY, 0644, NULL);
     if (mqd == -1)
     {
         perror("Failed to open message queue");
