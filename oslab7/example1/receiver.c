@@ -1,7 +1,6 @@
 #include<fcntl.h>
 #include<mqueue.h>
 #include<stdio.h>
-#include<string.h>
 
 #define MQNAME "/myMsgQueue"
 #define MAX_MSG_SIZE 1000
@@ -23,17 +22,7 @@ int main(){
             perror("Failed to receive message");
             return 1;
         }
-        // "\r\n\?" for WSL
-        if(strcmp(buffer, "exit\n") == 0 || strcmp(buffer, "exit\r\n\?") == 0){
-            printf("Exiting receiver...\n");
-            break;
-        }
         printf("Received: %s", buffer);   
-        for (int i = 0; i < 6; i++)
-        {
-            printf("%d\n", buffer[i]);
-        }
-        
     }
 
     int close = mq_close(mqd);
