@@ -23,11 +23,17 @@ int main(){
             perror("Failed to receive message");
             return 1;
         }
-        if(strcmp(buffer, "exit\n") == 0){
+        // "\r\n\?" for WSL
+        if(strcmp(buffer, "exit\n") == 0 || strcmp(buffer, "exit\r\n\?") == 0){
             printf("Exiting receiver...\n");
             break;
         }
         printf("Received: %s", buffer);   
+        for (int i = 0; i < 6; i++)
+        {
+            printf("%d\n", buffer[i]);
+        }
+        
     }
 
     int close = mq_close(mqd);
