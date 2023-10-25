@@ -15,7 +15,7 @@
 int main(){
     int socket_fd;
     struct sockaddr_in server_addr, client_addr;
-    socklen_t addr_len;
+    socklen_t addr_len=sizeof(client_addr);
     ssize_t bytes_send, bytes_recv;
     char buffer[MAXLINE];
 
