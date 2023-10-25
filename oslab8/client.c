@@ -8,7 +8,7 @@
 #include<unistd.h>
 #include<sys/types.h>
 
-#define PORT 50020
+#define PORT 3000
 #define MSG "hello from client"
 #define MAXLINE 1024
 
