@@ -1,3 +1,4 @@
+#!/bin/bash
 cd "linux-5.4.2"
 sudo cp /boot/config-`uname -r` .config
 yes '' |sudo make oldconfig
