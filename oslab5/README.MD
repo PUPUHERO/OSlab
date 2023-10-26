@@ -20,6 +20,9 @@
     - **`parameter_name`**：要描述的模塊參數的名稱。
     - **`description`**：對該參數的描述性文本。
 
+5. `timestamp = mktime64(year, month, day, hour, minute, second);`
+    - 需使用mktime64()來取得時間戳記
+
 ### Troubleshooting
 
 - make[1]: *** No rule to make target `arch/x86/entry/syscalls/syscall_32.tbl', needed by arch/x86/entry/syscalls/../../include/generated/asm/syscalls_32.h'.`  Stop.
