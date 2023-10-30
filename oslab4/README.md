@@ -39,6 +39,8 @@
 - init … too big
     
     在VMware上疑似使用BIOS啟動，更換成VirtualBox並以UEFI啟動即可解決
+
+    VMware預設使用BIOS啟動，若要修改為UEFI，則須在安裝時將`.vmx`檔案中的設定加入`firmware = "efi"`，若已安裝則需修改`.vmx`檔案中的設定並且重新安裝
     
 - Loading initial Ramdisk
     
