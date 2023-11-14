@@ -28,12 +28,7 @@ int main(){
             printf("Exiting receiver...\n");
             break;
         }
-        printf("Received: %s", buffer);   
-        for (int i = 0; i < 6; i++)
-        {
-            printf("%d\n", buffer[i]);
-        }
-        
+        printf("Received: %s", buffer);        
     }
 
     int close = mq_close(mqd);
