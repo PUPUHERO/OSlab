@@ -9,7 +9,7 @@ LIBS = -lpthread
 SRC = exercise1.c
 
 # Output file
-OUT = exercise1
+OUT = exercise1.exe
 
 all: $(OUT)
 
