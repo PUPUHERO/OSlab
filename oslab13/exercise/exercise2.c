@@ -72,12 +72,10 @@ static void *print1_thread(void *arg){
 static void *print3_thread(void *arg){
     while (1) {
         pthread_mutex_lock(&mutex);
-        if (printingNumber == 1)
-        {
-        pthread_cond_wait(&cond2, &mutex);
-        printf("3 ");
-        printingNumber = 3;
-    
+        if (printingNumber == 1){
+            pthread_cond_wait(&cond2, &mutex);
+            printf("3 ");
+            printingNumber = 3;
         }
         pthread_mutex_unlock(&mutex);
         pthread_cond_signal(&cond3);
@@ -88,8 +86,7 @@ static void *print3_thread(void *arg){
 static void *print5_thread(void *arg){
     while (1) {
         pthread_mutex_lock(&mutex);
-        if (printingNumber == 3)
-        {
+        if (printingNumber == 3){
             pthread_cond_wait(&cond3, &mutex);
             printf("5 ");
             printingNumber = 5;
