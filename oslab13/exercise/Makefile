@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -g -Ipthread
+CFLAGS = -g -pthread
 
 all: exercise1.exe exercise2.exe
 
